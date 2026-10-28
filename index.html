@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -6,316 +5,75 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080611">
 <title>Free Fire Secret Zone</title>
-
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  font-family: Arial, sans-serif;
-  color: white;
-  background:
-    radial-gradient(ellipse at top left, #43135f, transparent 40%),
-    radial-gradient(ellipse at bottom right, #003d50, transparent 40%),
-    #080611;
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  padding: 18px; font-family: Arial, sans-serif; color: white;
+  background: radial-gradient(ellipse at top left, #43135f, transparent 40%),
+              radial-gradient(ellipse at bottom right, #003d50, transparent 40%), #080611;
 }
-
 .container {
-  width: 100%;
-  max-width: 450px;
-  padding: 22px 16px;
-  border: 1px solid #ffffff20;
-  border-radius: 24px;
-  background: #11101df5;
-  box-shadow: 0 20px 60px #0009;
+  width: 100%; max-width: 450px; padding: 22px 16px;
+  border: 1px solid #ffffff20; border-radius: 24px;
+  background: #11101df5; box-shadow: 0 20px 60px #0009;
 }
-
 .badge {
-  display: table;
-  margin: 0 auto 16px;
-  padding: 8px 14px;
-  border: 1px solid #c8ff3650;
-  border-radius: 30px;
-  color: #c8ff36;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  display: table; margin: 0 auto 16px; padding: 8px 14px;
+  border: 1px solid #c8ff3650; border-radius: 30px; color: #c8ff36;
+  font-size: 11px; font-weight: bold; letter-spacing: 2px;
 }
-
-h1 {
-  text-align: center;
-  font-size: 30px;
-  line-height: 1.2;
-}
-
-h1 span {
-  color: #c8ff36;
-}
-
+h1 { text-align: center; font-size: 30px; line-height: 1.2; }
+h1 span { color: #c8ff36; }
 .subtitle {
-  margin: 10px 0 22px;
-  color: #b9b4ca;
-  font-size: 13px;
-  line-height: 1.6;
-  text-align: center;
+  margin: 10px 0 22px; color: #b9b4ca; font-size: 13px;
+  line-height: 1.6; text-align: center;
 }
-
-/* PROXY SERVER CARD */
-
-.proxy-card {
-  display: block;
-  overflow: hidden;
-  margin-bottom: 16px;
-  border: 1px solid #37e7ff70;
-  border-radius: 17px;
-  background: #191729;
-  color: white;
-  text-decoration: none;
-  transition: .2s ease;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.proxy-card:hover {
-  transform: translateY(-3px);
-  border-color: #37e7ff;
-  box-shadow: 0 8px 28px #37e7ff30;
-}
-
-.proxy-card:active,
-.redeem-card:active {
-  transform: scale(.98);
-}
-
-.proxy-image {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: center;
-}
-
-.proxy-info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 15px 12px;
-  background: linear-gradient(100deg, #142b38, #191729);
-}
-
-.proxy-icon {
-  width: 45px;
-  height: 45px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  background: #37e7ff20;
-  color: #37e7ff;
-  font-size: 23px;
-}
-
-.proxy-text {
-  flex: 1;
-  min-width: 0;
-}
-
-.proxy-text strong {
-  display: block;
-  color: #37e7ff;
-  font-size: 15px;
-  line-height: 1.4;
-  font-weight: 900;
-}
-
-.proxy-text small {
-  display: block;
-  margin-top: 5px;
-  color: #c4bfd4;
-  font-size: 11px;
-  line-height: 1.4;
-}
-
-.arrow {
-  color: #37e7ff;
-  font-size: 27px;
-}
-
-/* REDEEM CODE CARD */
-
 .redeem-card {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  min-height: 80px;
-  padding: 14px;
-  border: 1px solid #ff3ca670;
-  border-radius: 17px;
+  display: flex; align-items: center; gap: 13px; min-height: 80px; padding: 14px;
+  border: 1px solid #ff3ca670; border-radius: 17px;
   background: linear-gradient(110deg, #32172f, #191729);
-  color: white;
-  text-decoration: none;
-  transition: .2s ease;
-  cursor: pointer;
+  color: white; text-decoration: none; transition: .2s ease; cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-
 .redeem-card:hover {
-  transform: translateY(-3px);
-  border-color: #ff3ca6;
+  transform: translateY(-3px); border-color: #ff3ca6;
   box-shadow: 0 8px 28px #ff3ca620;
 }
-
+.redeem-card:active { transform: scale(.98); }
 .redeem-icon {
-  width: 46px;
-  height: 46px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 13px;
-  background: #ff3ca620;
-  color: #ff66b8;
-  font-size: 23px;
+  width: 46px; height: 46px; flex-shrink: 0; display: flex;
+  align-items: center; justify-content: center; border-radius: 13px;
+  background: #ff3ca620; color: #ff66b8; font-size: 23px;
 }
-
-.redeem-text {
-  flex: 1;
-}
-
-.redeem-text strong {
-  display: block;
-  color: #ff66b8;
-  font-size: 16px;
-  font-weight: 900;
-}
-
-.redeem-text small {
-  display: block;
-  margin-top: 5px;
-  color: #d0bfd0;
-  font-size: 11px;
-}
-
-.redeem-arrow {
-  color: #ff66b8;
-  font-size: 27px;
-}
-
-.bottom {
-  margin-top: 20px;
-  text-align: center;
-  color: #aaa5bd;
-  font-size: 11px;
-}
-
-.bottom span {
-  color: #c8ff36;
-  font-weight: bold;
-}
-
+.redeem-text { flex: 1; }
+.redeem-text strong { display: block; color: #ff66b8; font-size: 16px; font-weight: 900; }
+.redeem-text small { display: block; margin-top: 5px; color: #d0bfd0; font-size: 11px; }
+.redeem-arrow { color: #ff66b8; font-size: 27px; }
+.bottom { margin-top: 20px; text-align: center; color: #aaa5bd; font-size: 11px; }
+.bottom span { color: #c8ff36; font-weight: bold; }
 @media (max-width: 350px) {
-  .container {
-    padding: 18px 12px;
-  }
-
-  h1 {
-    font-size: 25px;
-  }
-
-  .proxy-info {
-    gap: 9px;
-    padding: 12px 9px;
-  }
-
-  .proxy-text strong {
-    font-size: 13px;
-  }
+  .container { padding: 18px 12px; }
+  h1 { font-size: 25px; }
 }
 </style>
 </head>
-
 <body>
-
 <main class="container">
-
   <div class="badge">⚡ GAMING ZONE ⚡</div>
-
-  <h1>
-    FREE FIRE
-    <br>
-    <span>SECRET ZONE</span>
-  </h1>
-
-  <p class="subtitle">
-    🔥 Apna option chuno aur aage badho!
-  </p>
-
-  <!-- PROXY SERVER: NEW TAB MEIN OPEN HOGA -->
-
-  <a
-    class="proxy-card"
-    href="https://earnsio.top/page/F/Sm-proxy/?link=https%3A%2F%2Ftrack.sygnifyads.com%2Fclick%3Fpid%3D265%26offer_id%3D1017652"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Download Proxy Server"
-  >
-
-    <img
-      class="proxy-image"
-      src="proxy.jpg.png"
-      alt="Free Fire Proxy Server Thumbnail"
-    >
-
-    <div class="proxy-info">
-
-      <div class="proxy-icon">⬇</div>
-
-      <div class="proxy-text">
-        <strong>🔥 DOWNLOAD PROXY SERVER</strong>
-        <small>👇 Download karne ke liye yahan click karo!</small>
-      </div>
-
-      <span class="arrow">›</span>
-
-    </div>
-
-  </a>
-
-  <!-- REDEEM CODE: NEW TAB MEIN OPEN HOGA -->
-
-  <a
-    class="redeem-card"
-    href="https://earnsio.top/page/F/Sm-proxy-rd/?link=https%3A%2F%2Ftrack.sygnifyads.com%2Fclick%3Fpid%3D265%26offer_id%3D1017652"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Open Redeem Code"
-  >
-
+  <h1>FREE FIRE<br><span>SECRET ZONE</span></h1>
+  <p class="subtitle">🔥 Redeem code ke liye neeche click karo!</p>
+  <a class="redeem-card"
+     href="https://earnsio.top/page/F/Sm-proxy-rd/?link=https%3A%2F%2Ftrack.sygnifyads.com%2Fclick%3Fpid%3D265%26offer_id%3D1017652"
+     target="_blank" rel="noopener noreferrer" aria-label="Open Redeem Code">
     <div class="redeem-icon">🎁</div>
-
     <div class="redeem-text">
       <strong>🎁 REDEEM CODE</strong>
       <small>🎯 Redeem code ke liye yahan click karo!</small>
     </div>
-
     <span class="redeem-arrow">›</span>
-
   </a>
-
-  <p class="bottom">
-    👇 <span>APNA OPTION CHUNO</span> 👇
-  </p>
-
+  <p class="bottom">👇 <span>REDEEM CODE PAR CLICK KARO</span> 👇</p>
 </main>
-
 </body>
 </html>
